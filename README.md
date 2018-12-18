@@ -1,4 +1,4 @@
-# sprnza/supysonic
+# speranza/supysonic
 Dockerize [Supysonic](https://github.com/spl0k/supysonic) postgresql edition with watcher included. Based on [mikafouenski/docker-supysonic](https://github.com/mikafouenski/docker-supysonic).
 
 ## Usage
