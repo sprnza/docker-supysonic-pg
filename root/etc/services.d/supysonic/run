@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv sh
+
+umask 022
+
+cd /app || exit
+
+exec s6-setuidgid appuser \
+    gunicorn app \
+        --name supysonic \
+        --bind 0.0.0.0:8000 \
+        --workers ${WORKERS:-4} \
+        --timeout ${TIMEOUT:-180}
+        --log-level=info
+    

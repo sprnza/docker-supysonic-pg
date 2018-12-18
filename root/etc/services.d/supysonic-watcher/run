@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv sh
+
+umask 022
+
+[[ ${WATCHER:-1} -eq 1 ]] && \
+    exec s6-setuidgid appuser \
+       supysonic-watcher
+
